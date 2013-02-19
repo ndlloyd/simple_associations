@@ -17,7 +17,8 @@
   </div>
   <div class="field">
     <%= f.label :itemName %><br />
-    <%= f.text_field :itemName %>
+    <%= f.collection_select
+			:itemName, Item.all, :name, :name %>
   </div>
   <div class="field">
     <%= f.label :totalCost %><br />

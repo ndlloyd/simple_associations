@@ -1,6 +1,11 @@
 class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
+#  def convert_customer_name_to_id
+#    customer = Customer.find_by_name(self.customer.name)
+#    self.customer_id = customer.id unless customer.nil?
+#  end
+  
   def index
     @orders = Order.all
 
