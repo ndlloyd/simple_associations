@@ -12,13 +12,16 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :customer_id %><br />
+    <%= f.number_field :customer_id %>
+  </div>
+  <div class="field">
     <%= f.label :quantity %><br />
     <%= f.number_field :quantity %>
   </div>
   <div class="field">
     <%= f.label :itemName %><br />
-    <%= f.collection_select
-			:itemName, Item.all, :name, :name %>
+    <%= f.collection_select(:itemName, Item.all, :name, :name) %>
   </div>
   <div class="field">
     <%= f.label :totalCost %><br />
