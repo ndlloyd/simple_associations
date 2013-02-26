@@ -14,7 +14,9 @@
   <b>Contact:</b>
   <%= @customer.contact %>
 </p>
-
+<%= orders_table %>
 
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>
+<%= link_to 'Back', customers_path %> |
+<%= link_to 'Place Order', new_customer_order_path(@customer) %> |
+<%= link_to 'View Orders', customer_orders_path(@customer) %>
